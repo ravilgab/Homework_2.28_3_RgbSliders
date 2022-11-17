@@ -29,11 +29,13 @@ class ViewController: UIViewController {
     }
 
     @IBAction func masterSliderMoved(_ sender: UISlider) {
-        if sender == redSlider {
+        
+        switch sender {
+        case redSlider:
             redLabel.text = convertToString(from: sender)
-        } else if sender == greenSlider {
+        case greenSlider:
             greenLabel.text = convertToString(from: sender)
-        } else {
+        default:
             blueLabel.text = convertToString(from: sender)
         }
         
